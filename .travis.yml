@@ -10,4 +10,5 @@ before_install:
   - docker build -t nawaf83/youtube-stats -f Dockerfile.dev .
   
 script:
-  - docker run -e CI=true nawaf83/youtube-stats npm run test
+  - docker run nawaf83/youtube-stats npm run test -- --coverage
+  
